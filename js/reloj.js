@@ -13,9 +13,11 @@ const mostrarReloj = ()=>{
     let fechaTexto = `${diaSemana}, ${dia} ${mes}`;
     document.getElementById('fecha').innerHTML = fechaTexto;
 
+    // llamado a la clase animar
     document.getElementById('contenedor').classList.toggle('animar');
 }
 
+//agrega un 0 al formato de hora en caso de contener solo 1 digito
 const formatoHora = (hora)=>{
     if (hora < 10) {
         hora = '0' + hora;
@@ -23,4 +25,5 @@ const formatoHora = (hora)=>{
     return hora;
 }
 
+// llama la funcion flecha cada 1 segundo
 setInterval(mostrarReloj, 1000);
